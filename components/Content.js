@@ -1,22 +1,25 @@
 // /components/Content.js
 
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Alert } from 'react-native'; // Importando Alert
 import ButtonComponent from './ButtonComponent';
 import HelpSection from './HelpSection';
+import { useNavigation } from '@react-navigation/native'; // Importando o hook de navegação
 
 const Content = () => {
+  const navigation = useNavigation(); // Inicializa o hook de navegação
+
   const handleLogin = () => {
-    Alert.alert('Login', 'Você clicou em Fazer login');
+    navigation.navigate('Login'); // Navega para a tela de login
   };
 
   const handleRegister = () => {
-    Alert.alert('Registrar', 'Você clicou em Registrar conta');
+    Alert.alert('Registrar', 'Você clicou em Registrar conta'); // Usando Alert corretamente
   };
 
   return (
     <View style={styles.content}>
-      <Text style={styles.title}>Bem vindo ao aplicativo da federação de damas!</Text>
+      <Text style={styles.title}>Bem-vindo ao aplicativo da federação de damas!</Text>
       <ButtonComponent title="Fazer login" onPress={handleLogin} />
       <ButtonComponent title="Registrar conta" onPress={handleRegister} />
       <HelpSection />
