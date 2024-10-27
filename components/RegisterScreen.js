@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
-
-const LoginScreen = () => {
-  const navigation = useNavigation();
+const RegisterScreen = () => {
   const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Fazer login</Text>
-      <Text style={styles.subtitle}>Realize o login para poder acessar todas as funcionalidades do app</Text>
+      <Text style={styles.title}>Registrar conta</Text>
+      <Text style={styles.subtitle}>Registre sua conta com suas credenciais e tenha acesso a todas as funcionalidades do app</Text>
 
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>Email ou CPF</Text>
+        <Text style={styles.label}>Email</Text>
         <TextInput
           style={styles.input}
           onChangeText={text => setEmail(text)}
           value={email}
-          placeholder="Digite seu email ou CPF"
+          placeholder="Digite seu email"
+          placeholderTextColor="#C7C7CD"
+        />
+
+        <Text style={styles.label}>Primeiro nome (nome de usuário)</Text>
+        <TextInput
+          style={styles.input}
+          onChangeText={text => setUsername(text)}
+          value={username}
+          placeholder="Digite seu nome de usuário"
           placeholderTextColor="#C7C7CD"
         />
 
@@ -33,14 +40,9 @@ const LoginScreen = () => {
           placeholderTextColor="#C7C7CD"
         />
 
-        <TouchableOpacity style={styles.loginButton}>
-          <Text style={styles.loginButtonText}>Fazer login</Text>
+        <TouchableOpacity style={styles.registerButton}>
+          <Text style={styles.registerButtonText}>Registrar conta</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
-          <Text style={styles.forgotPassword}>Esqueceu sua senha?</Text>
-        </TouchableOpacity>
-
       </View>
     </View>
   );
@@ -90,7 +92,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     backgroundColor: '#F6F6F6',
   },
-  loginButton: {
+  registerButton: {
     backgroundColor: '#D9534F',
     borderRadius: 8,
     width: '100%',
@@ -98,16 +100,11 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     marginBottom: 10,
   },
-  loginButtonText: {
+  registerButtonText: {
     color: '#FFF',
     fontSize: 16,
     fontWeight: 'bold',
   },
-  forgotPassword: {
-    color: '#D9534F',
-    fontSize: 14,
-    marginTop: 10,
-  },
 });
 
-export default LoginScreen;
+export default RegisterScreen;

@@ -1,46 +1,38 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
-
-const LoginScreen = () => {
-  const navigation = useNavigation();
+const ForgotPasswordScreen = () => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [cpf, setCpf] = useState('');
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Fazer login</Text>
-      <Text style={styles.subtitle}>Realize o login para poder acessar todas as funcionalidades do app</Text>
+      <Text style={styles.title}>Esqueceu sua senha?</Text>
+      <Text style={styles.subtitle}>Sem problemas! Siga os passos abaixo e te ajudaremos a recuperar.</Text>
 
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>Email ou CPF</Text>
+        <Text style={styles.label}>Email</Text>
         <TextInput
           style={styles.input}
           onChangeText={text => setEmail(text)}
           value={email}
-          placeholder="Digite seu email ou CPF"
+          placeholder="Digite seu email"
           placeholderTextColor="#C7C7CD"
         />
 
-        <Text style={styles.label}>Senha</Text>
+        <Text style={styles.label}>CPF</Text>
         <TextInput
           style={styles.input}
-          secureTextEntry
-          onChangeText={text => setPassword(text)}
-          value={password}
-          placeholder="Digite sua senha"
+          onChangeText={text => setCpf(text)}
+          value={cpf}
+          placeholder="Digite seu CPF"
           placeholderTextColor="#C7C7CD"
+          keyboardType="numeric" // Para garantir que o CPF seja inserido corretamente
         />
 
         <TouchableOpacity style={styles.loginButton}>
-          <Text style={styles.loginButtonText}>Fazer login</Text>
+          <Text style={styles.loginButtonText}>Recuperar senha</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
-          <Text style={styles.forgotPassword}>Esqueceu sua senha?</Text>
-        </TouchableOpacity>
-
       </View>
     </View>
   );
@@ -56,7 +48,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: 'bold', 
     color: '#FFF',
     marginBottom: 8,
   },
@@ -103,11 +95,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-  forgotPassword: {
-    color: '#D9534F',
-    fontSize: 14,
-    marginTop: 10,
-  },
 });
 
-export default LoginScreen;
+export default ForgotPasswordScreen;

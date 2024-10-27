@@ -1,31 +1,27 @@
-// /components/HelpSection.js
-
 import React from 'react';
 import { Text, StyleSheet, Linking } from 'react-native';
 
-const HelpSection = () => {
+export default function SupportText({ url }) {
   return (
-    <Text style={styles.help}>
+    <Text style={styles.supportText}>
       Precisa de ajuda? Clique{' '}
-      <Text style={styles.link} onPress={() => Linking.openURL('https://suporte.exemplo.com')}>
+      <Text style={styles.link} onPress={() => Linking.openURL(url)}>
         aqui
       </Text>{' '}
       para falar com suporte
     </Text>
   );
-};
+}
 
 const styles = StyleSheet.create({
-  help: {
+  supportText: {
     fontSize: 14,
-    color: '#333333',
+    color: '#000',
     marginTop: 20,
     textAlign: 'center',
   },
   link: {
-    color: '#b33a3a',
+    color: '#007BFF',
     textDecorationLine: 'underline',
   },
 });
-
-export default HelpSection;

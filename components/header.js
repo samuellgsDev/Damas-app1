@@ -1,32 +1,22 @@
-// /components/Header.js
-
 import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-const Header = () => {
+export default function header() {
   return (
     <View style={styles.header}>
-      <Image
-        source={{ uri: 'Damas\assets\dama.png' }}
-        style={styles.logo}
-      />
+      <Text style={styles.icon}>icone damas</Text>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: '#333333',
-    width: '100%',
+    flex: 1,
     alignItems: 'center',
-    padding: 20,
-    borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
+    justifyContent: 'center',
   },
-  logo: {
-    width: 100,
-    height: 100,
+  icon: {
+    color: '#fff',
+    fontSize: 24,
   },
 });
-
-export default Header;
