@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native'; 
 
 const ForgotPasswordScreen = () => {
   const [email, setEmail] = useState('');
   const [cpf, setCpf] = useState('');
+  const navigation = useNavigation(); // Hook de navegação
+
+  const handleRecoverPassword = () => {
+    // Insira a lógica de validação de email e CPF, se necessário
+    navigation.navigate('ResetPassword'); // Navega para a tela ResetPassword
+  };
 
   return (
     <View style={styles.container}>
@@ -30,7 +37,7 @@ const ForgotPasswordScreen = () => {
           keyboardType="numeric" // Para garantir que o CPF seja inserido corretamente
         />
 
-        <TouchableOpacity style={styles.loginButton}>
+        <TouchableOpacity style={styles.loginButton} onPress={handleRecoverPassword}>
           <Text style={styles.loginButtonText}>Recuperar senha</Text>
         </TouchableOpacity>
       </View>
