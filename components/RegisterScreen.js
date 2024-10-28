@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
-const RegisterScreen = () => {
+const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+  const handleRegister = () => {
+    // Aqui você pode adicionar lógica de validação e registro, se necessário.
+    navigation.navigate('AccountRegisteredSuccess'); // Navega para a tela de sucesso
+  };
 
   return (
     <View style={styles.container}>
@@ -40,7 +45,7 @@ const RegisterScreen = () => {
           placeholderTextColor="#C7C7CD"
         />
 
-        <TouchableOpacity style={styles.registerButton}>
+        <TouchableOpacity style={styles.registerButton} onPress={handleRegister}>
           <Text style={styles.registerButtonText}>Registrar conta</Text>
         </TouchableOpacity>
       </View>

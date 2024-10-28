@@ -1,10 +1,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './components/HomeScreen'; // Tela inicial com opções de login e registro
-import LoginScreen from './components/LoginScreen'; // Tela de login
-import RegisterScreen from './components/RegisterScreen'; // Tela de registro
-import ForgotPasswordScreen from './components/ForgotPasswordScreen'; // Tela de esquecer senha
+import HomeScreen from './components/HomeScreen';
+import LoginScreen from './components/LoginScreen';
+import RegisterScreen from './components/RegisterScreen';
+import ForgotPasswordScreen from './components/ForgotPasswordScreen';
+import ResetPasswordScreen from './components/ResetPasswordScreen';
+import PasswordResetSuccessScreen from './components/PasswordResetSuccessScreen';
+import AccountRegisteredSuccessScreen from './components/AccountRegisteredSuccessScreen';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +34,21 @@ const App = () => {
           name="ForgotPassword"
           component={ForgotPasswordScreen}
           options={{ title: 'Recuperar Senha' }}
+        />
+        <Stack.Screen
+          name="ResetPassword"
+          component={ResetPasswordScreen}
+          options={{ title: 'Redefinir Senha' }}
+        />
+        <Stack.Screen
+          name="PasswordResetSuccess"
+          component={PasswordResetSuccessScreen}
+          options={{ title: 'Sucesso' }}
+        />
+        <Stack.Screen
+          name="AccountRegisteredSuccess"
+          component={AccountRegisteredSuccessScreen}
+          options={{ title: 'Sucesso na Registro', headerShown: false }} // Mudei o título para clareza
         />
       </Stack.Navigator>
     </NavigationContainer>
