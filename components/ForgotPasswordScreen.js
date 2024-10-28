@@ -5,10 +5,10 @@ import { useNavigation } from '@react-navigation/native';
 const ForgotPasswordScreen = () => {
   const [email, setEmail] = useState('');
   const [cpf, setCpf] = useState('');
-  const navigation = useNavigation(); // Hook de navegação
+  const navigation = useNavigation();
 
   const handleRecoverPassword = () => {
-    // Insira a lógica de validação de email e CPF, se necessário
+    // Insirir a lógica de validação de email e CPF, se necessário
     navigation.navigate('ResetPassword'); // Navega para a tela ResetPassword
   };
 
