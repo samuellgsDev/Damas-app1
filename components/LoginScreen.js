@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-
 const LoginScreen = () => {
   const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    // Aqui você pode adicionar a lógica de autenticação com backend
+    // Se a autenticação for bem-sucedida, redireciona para a tela FirstAcessScreen
+
+    navigation.navigate('FirstAcess'); // Navega para a tela FirstAcessScreen
+  };
 
   return (
     <View style={styles.container}>
@@ -33,14 +39,13 @@ const LoginScreen = () => {
           placeholderTextColor="#C7C7CD"
         />
 
-        <TouchableOpacity style={styles.loginButton}>
+        <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
           <Text style={styles.loginButtonText}>Fazer login</Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
           <Text style={styles.forgotPassword}>Esqueceu sua senha?</Text>
         </TouchableOpacity>
-
       </View>
     </View>
   );

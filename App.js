@@ -8,6 +8,9 @@ import ForgotPasswordScreen from './components/ForgotPasswordScreen';
 import ResetPasswordScreen from './components/ResetPasswordScreen';
 import PasswordResetSuccessScreen from './components/PasswordResetSuccessScreen';
 import AccountRegisteredSuccessScreen from './components/AccountRegisteredSuccessScreen';
+import FirstAcessScreen from './components/FirstAcessScreen';
+
+
 
 const Stack = createStackNavigator();
 
@@ -49,6 +52,11 @@ const App = () => {
           name="AccountRegisteredSuccess"
           component={AccountRegisteredSuccessScreen}
           options={{ title: 'Sucesso na Registro', headerShown: false }} // Mudei o título para clareza
+        />
+        <Stack.Screen
+          name="FirstAcess"
+          component={FirstAcessScreen}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
