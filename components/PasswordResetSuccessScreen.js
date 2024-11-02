@@ -1,11 +1,10 @@
-// components/PasswordResetSuccessScreen.js
 
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const PasswordResetSuccessScreen = ({ navigation }) => {
   const handleBackToLogin = () => {
-    navigation.navigate('Login'); // Navega para a tela de login
+    navigation.navigate('Login'); 
   };
 
   return (

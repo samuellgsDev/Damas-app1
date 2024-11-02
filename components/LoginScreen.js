@@ -8,7 +8,7 @@ const LoginScreen = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Aqui você pode adicionar a lógica de autenticação com backend
+    // add l0ogica de autenticar
     // Se a autenticação for bem-sucedida, redireciona para a tela FirstAcessScreen
 
     navigation.navigate('FirstAcess'); // Navega para a tela FirstAcessScreen

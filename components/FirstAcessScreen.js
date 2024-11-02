@@ -5,8 +5,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 const FirstAcessScreen = ({ navigation }) => {
   const handleCompleteRegistration = () => {
-    // Navega para a tela de finalização do cadastro
-    navigation.navigate('CompleteRegistration');
+    navigation.navigate('ProfileSetup');
   };
 
   return (
@@ -15,7 +14,7 @@ const FirstAcessScreen = ({ navigation }) => {
       <View style={styles.header}>
         <View style={styles.profileImageContainer}>
           <Image
-            source={{ uri: 'https://via.placeholder.com/80' }} // Substitua pela imagem de perfil do usuário, se disponível
+            source={{ uri: 'https://via.placeholder.com/80' }}//substiruir pela imagem do usuário
             style={styles.profileImage}
           />
         </View>
@@ -32,7 +31,6 @@ const FirstAcessScreen = ({ navigation }) => {
           Mas te acalma! Antes de poder te inscrever em campeonatos, precisamos de algumas informações suas pra terminar seu cadastro.
         </Text>
 
-        {/* Botão de finalizar cadastro */}
         <TouchableOpacity style={styles.button} onPress={handleCompleteRegistration}>
           <Text style={styles.buttonText}>Finalizar Cadastro</Text>
         </TouchableOpacity>

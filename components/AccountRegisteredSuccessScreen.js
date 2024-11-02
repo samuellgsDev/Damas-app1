@@ -6,7 +6,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 const AccountRegisteredSuccessScreen = ({ navigation }) => {
     console.log("AccountRegisteredSuccessScreen foi chamado"); // Log para debug
     const handleBackToLogin = () => {
-    navigation.navigate('Login'); // Navega para a tela de login
+    navigation.navigate('Login');
   };
 
   return (

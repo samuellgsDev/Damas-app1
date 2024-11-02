@@ -7,7 +7,7 @@ const RegisterScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');
 
   const handleRegister = () => {
-    // Aqui você pode adicionar lógica de validação e registro, se necessário.
+// add logica
     navigation.navigate('AccountRegisteredSuccess'); // Navega para a tela de sucesso
   };
 

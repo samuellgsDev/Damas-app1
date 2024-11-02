@@ -8,8 +8,8 @@ const ForgotPasswordScreen = () => {
   const navigation = useNavigation();
 
   const handleRecoverPassword = () => {
-    // Insirir a lógica de validação de email e CPF, se necessário
-    navigation.navigate('ResetPassword'); // Navega para a tela ResetPassword
+    // add validacao de email e cpf
+    navigation.navigate('ResetPassword'); 
   };
 
   return (

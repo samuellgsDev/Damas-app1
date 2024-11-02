@@ -9,6 +9,9 @@ import ResetPasswordScreen from './components/ResetPasswordScreen';
 import PasswordResetSuccessScreen from './components/PasswordResetSuccessScreen';
 import AccountRegisteredSuccessScreen from './components/AccountRegisteredSuccessScreen';
 import FirstAcessScreen from './components/FirstAcessScreen';
+import ProfileSetupScreen from './components/ProfileSetupScreen';
+import AddPhotoScreen from './components/AddPhotoScreen';
+import RegisterCompleteScreen from './components/RegisterCompleteScreen';
 
 
 
@@ -57,6 +60,21 @@ const App = () => {
           name="FirstAcess"
           component={FirstAcessScreen}
           options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="ProfileSetup"
+          component={ProfileSetupScreen}
+          options={{ title: 'Configurar Perfil' }}
+        />
+         <Stack.Screen
+          name="AddPhoto"
+          component={AddPhotoScreen} 
+          options={{ title: 'Adicionar Foto' }}
+        />
+         <Stack.Screen
+          name="RegisterComplete"
+          component={RegisterCompleteScreen} 
+          options={{ title: 'Registrado com sucesso' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

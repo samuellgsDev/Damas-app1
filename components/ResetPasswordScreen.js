@@ -1,16 +1,15 @@
-// components/ResetPasswordScreen.js
 
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
-const ResetPasswordScreen = ({ navigation }) => { // Adicione { navigation } como parâmetro
+const ResetPasswordScreen = ({ navigation }) => { 
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleResetPassword = () => {
     if (newPassword === confirmPassword) {
       console.log('Senha redefinida com sucesso!');
-      navigation.navigate('PasswordResetSuccess'); // Navega para a tela de sucesso
+      navigation.navigate('PasswordResetSuccess'); 
     } else {
       console.log('As senhas não coincidem');
     }
