@@ -17,7 +17,7 @@ const RegisterCompleteScreen = ({ navigation }) => {
         
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Home')} // Direciona o usuário para a tela Home ou outra tela inicial
+          onPress={() => navigation.navigate('UserProfile')} // Direciona o usuário para a tela Home ou outra tela inicial
         >
           <Text style={styles.buttonText}>Voltar à página principal</Text>
         </TouchableOpacity>
