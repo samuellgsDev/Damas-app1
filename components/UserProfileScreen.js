@@ -38,7 +38,11 @@ const UserProfileScreen = ({ navigation }) => {
           <Text style={styles.tournamentTitle}>Torneio Maranhense de Damas</Text>
           <Text>Data: 12/06/2023</Text>
           <Text>Local: Castelinho</Text>
-          <TouchableOpacity style={styles.moreInfoButton}>
+          {/* Botão de Mais Informações com Navegação para TournamentDetailsScreen */}
+          <TouchableOpacity 
+            style={styles.moreInfoButton} 
+            onPress={() => navigation.navigate('TournamentDetails')}
+          >
             <Text style={styles.moreInfoButtonText}>Mais informações</Text>
           </TouchableOpacity>
         </View>
