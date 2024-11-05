@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 
-const TournamentScreen = () => {
+const TournamentScreen = ({ navigation }) => {  // Adiciona navigation como prop
   const [searchQuery, setSearchQuery] = useState('');
 
   // Lista de torneios (mock data)
@@ -32,7 +32,10 @@ const TournamentScreen = () => {
       <Text style={styles.torneioTitle}>{item.title}</Text>
       <Text style={styles.torneioDetail}>Data: {item.date}</Text>
       <Text style={styles.torneioDetail}>Local: {item.location}</Text>
-      <TouchableOpacity style={styles.infoButton}>
+      <TouchableOpacity 
+        style={styles.infoButton} 
+        onPress={() => navigation.navigate('RegisterTournament')}  // Adiciona navegação para RegisterTournamentScreen
+      >
         <Text style={styles.infoButtonText}>Mais informações</Text>
       </TouchableOpacity>
     </View>
