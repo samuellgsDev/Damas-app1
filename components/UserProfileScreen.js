@@ -4,12 +4,9 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 const UserProfileScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.menuButton} onPress={() => navigation.openDrawer()}>
-        <Text style={styles.menuText}>☰</Text>
-      </TouchableOpacity>
 
       <View style={styles.profileContainer}>
-        <Image source={{ uri: 'https://via.placeholder.com/100' }} style={styles.profileImage} />
+        <Image source={{ uri: 'https://tse2.mm.bing.net/th?id=OIP.yhqkR9B2hKbtwwZ8bPNbQQHaHw&pid=Api&P=0&h=180' }} style={styles.profileImage} />
         <View style={styles.userInfo}>
           <Text style={styles.label}>CPF</Text>
           <Text>009.176.113-14</Text>
@@ -24,25 +21,11 @@ const UserProfileScreen = ({ navigation }) => {
           <Text>Jonson</Text>
 
           <Text style={styles.label}>Telefone</Text>
-          <Text>(98) 981004524</Text>
+          <Text>(98)981004524</Text>
         </View>
 
-        <TouchableOpacity style={styles.editButton}>
-          <Text style={styles.editButtonText}>Alterar informações e foto</Text>
-        </TouchableOpacity>
       </View>
 
-      <View style={styles.tournamentsSection}>
-        <Text style={styles.sectionTitle}>Seus torneios passados</Text>
-        <View style={styles.tournamentCard}>
-          <Text style={styles.tournamentTitle}>Torneio Maranhense de Damas</Text>
-          <Text>Data: 12/06/2023</Text>
-          <Text>Local: Castelinho</Text>
-          <TouchableOpacity style={styles.moreInfoButton}>
-            <Text style={styles.moreInfoButtonText}>Mais informações</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
     </View>
   );
 };

@@ -14,7 +14,9 @@ import ProfileSetupScreen from './components/ProfileSetupScreen';
 import AddPhotoScreen from './components/AddPhotoScreen';
 import RegisterCompleteScreen from './components/RegisterCompleteScreen';
 import UserProfileScreen from './components/UserProfileScreen';
-
+import Championship from './components/Championship';
+import Torneio from './components/Torneio';
+import ChampionshipAfter from './components/ChampionshipAfter';
 // Configuração do Stack Navigator
 const Stack = createStackNavigator();
 const MainStack = () => (
@@ -31,6 +33,10 @@ const MainStack = () => (
     <Stack.Screen name="AddPhoto" component={AddPhotoScreen} options={{ title: 'Adicionar Foto' }} />
     <Stack.Screen name="RegisterComplete" component={RegisterCompleteScreen} options={{ title: 'Registrado com sucesso' }} />
     <Stack.Screen name="UserProfile" component={UserProfileScreen} options={{ title: 'Perfil do usuário' }} />
+    <Stack.Screen name="Tournament" component={Championship} options={{ title: 'Torneios' }} />
+    <Stack.Screen name="Torneio" component={Torneio} options={{ title: 'Torneio' }} />
+    <Stack.Screen name="ChampionshipAfter" component={ChampionshipAfter} options={{ headerShown: false}} />
+
   </Stack.Navigator>
 );
 
@@ -38,8 +44,10 @@ const MainStack = () => (
 const Drawer = createDrawerNavigator();
 const DrawerNavigation = () => (
   <Drawer.Navigator initialRouteName="Main">
-    <Drawer.Screen name="Main" component={MainStack} options={{ title: 'Página Principal' }} />
+    <Drawer.Screen name="Main" component={MainStack} options={{ title: '' }} />
     <Drawer.Screen name="UserProfile" component={UserProfileScreen} options={{ title: 'Perfil do Usuário' }} />
+    <Drawer.Screen name="MainPage" component={UserProfileScreen} options={{ title: 'Página Principal' }} />
+    <Drawer.Screen name="Championship" component={Championship} options={{ title: 'Torneios' }} />
     {/* Adicione mais telas aqui se necessário */}
   </Drawer.Navigator>
 );

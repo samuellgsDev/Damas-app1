@@ -10,10 +10,6 @@ const RegisterCompleteScreen = ({ navigation }) => {
           Agora você pode se inscrever e participar de torneios pela nossa plataforma!
         </Text>
         
-        <Image
-          source={{ uri: 'https://via.placeholder.com/100' }} // Substitua pela URL de uma imagem de emoji de sucesso, se tiver
-          style={styles.successIcon}
-        />
         
         <TouchableOpacity
           style={styles.button}

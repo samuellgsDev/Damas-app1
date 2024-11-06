@@ -77,6 +77,7 @@ const AddPhotoScreen = ({ navigation }) => {
 
     if (!result.cancelled) {
       setSelectedImage(result.uri);
+
     }
   };
 
