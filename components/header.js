@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Image } from 'react-native-web';
 
 export default function header() {
   return (
     <View style={styles.header}>
-      <Text style={styles.icon}>icone damas</Text>
+     <Image source={"./assets/dama.png"} style={styles.icon}/>
     </View>
   );
 }
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   icon: {
-    color: '#fff',
-    fontSize: 24,
+    width: 200,
+    height: 65 ,
   },
 });

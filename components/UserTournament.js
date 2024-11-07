@@ -2,33 +2,30 @@
 
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { TextInput } from 'react-native-web';
 
-const ChampionshipAfter = ({ navigation }) => {
+const UserTournament = ({ navigation }) => {
 
 
   return (
     <View style={styles.container}>
       {/* Cabeçalho com nome do usuário */}
       <View style={styles.header}>
-        <Image source={"./assets/dama.png"} style ={styles.profileImage}/>
-      </View>
-      <Text style={styles.title}>Torneios Futuros</Text>
-      <View style={styles.tournamentsSection}>
-      <TextInput
-        style={styles.searchInput}
-        placeholder="Cidade, nome do torneio, categoria"
-      />
-        <View style={styles.tournamentCard}>
-          <Text style={styles.tournamentTitle}>Open de damas | Amador</Text>
-          <Text>Data: 02/12/2024</Text>
-          <Text>Local: Costa Rodrigues</Text>
-          <TouchableOpacity style={styles.moreInfoButton}>
-            <Text style={styles.moreInfoButtonText} onPress={() => navigation.navigate('TorneioTwo')}>Mais informações</Text>
-          </TouchableOpacity>
+        <View style={styles.profileImageContainer}>
+        <Image source={{ uri: 'https://tse2.mm.bing.net/th?id=OIP.yhqkR9B2hKbtwwZ8bPNbQQHaHw&pid=Api&P=0&h=180' }} style={styles.profileImage} />
         </View>
-
+        <Text style={styles.username}>Usuário Igor</Text>
       </View>
+      <Text style={styles.title}>Seus Torneios :</Text>
+      <View style={styles.contentContainer}>
+        <Text style={styles.message}>
+          Parece que você ainda não adiocionou nenhum torneio a sua tela de torneios, que tal acessar a nossa aba de torneios e escolher sua proxima competição para ganhar! 
+        </Text>
+
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Tournament')} >
+          <Text style={styles.buttonText}>Torneios </Text>
+        </TouchableOpacity>
+      </View>
+
     </View>
   );
 };
@@ -52,15 +49,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   profileImage: {
-    width: 200,
-    height: 65 ,
-  },searchInput: {
-    backgroundColor: '#FFFFFF',
-    padding: 10,
-    borderRadius: 8,
-    marginBottom: 20,
-    borderColor: '#CCCCCC',
-    borderWidth: 1,
+    width: 80,
+    height: 80,
+    borderRadius: 40,
   },
   username: {
     color: '#D9534F',
@@ -136,4 +127,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ChampionshipAfter;
+export default UserTournament;

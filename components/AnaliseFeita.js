@@ -1,21 +1,21 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
-const AccountRegisteredSuccessScreen = ({ navigation }) => {
+const AnaliseFeita = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.modalBox}>
-        <Text style={styles.title}>Conta Registrada com sucesso!</Text>
+        <Text style={styles.title}>Comprovante analisado com sucesso!</Text>
         <Text style={styles.message}>
-          Agora você pode usar suas credenciais para acessar o aplicativo e suas funcionalidades!
+          Você aprovou o comprovante de um usuário!
         </Text>
         
         
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Login')} // Direciona o usuário para a tela Home ou outra tela inicial
+          onPress={() => navigation.navigate('AdmFinal')} // Direciona o usuário para a tela Home ou outra tela inicial
         >
-          <Text style={styles.buttonText}>Voltar ao Login</Text>
+          <Text style={styles.buttonText}>Voltar a tela principal de ADM</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AccountRegisteredSuccessScreen;
+export default AnaliseFeita;

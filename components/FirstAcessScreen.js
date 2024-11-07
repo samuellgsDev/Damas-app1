@@ -18,14 +18,14 @@ const FirstAcessScreen = ({ navigation }) => {
             style={styles.profileImage}
           />
         </View>
-        <Text style={styles.username}>Usuário Jonson</Text>
+        <Text style={styles.username}>Usuário Igor</Text>
       </View>
 
       {/* Conteúdo de boas-vindas */}
       <View style={styles.contentContainer}>
         <Text style={styles.title}>Bem vindo ao app!</Text>
         <Text style={styles.message}>
-          Aqui você poderá participar de diversos campeonatos de damas. Além de conferir em primeira mão o ranking dos jogadores da região.
+          Aqui você poderá participar de diversos campeonatos de damas, Além de poder validar sua inscrição!
         </Text>
         <Text style={styles.message}>
           Mas te acalma! Antes de poder te inscrever em campeonatos, precisamos de algumas informações suas pra terminar seu cadastro.

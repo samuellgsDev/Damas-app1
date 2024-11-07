@@ -12,20 +12,21 @@ const UserProfileScreen = ({ navigation }) => {
           <Text>009.176.113-14</Text>
 
           <Text style={styles.label}>Nome completo</Text>
-          <Text>Jonson Jonson de J</Text>
+          <Text>Igor Lima Pereira</Text>
 
           <Text style={styles.label}>CEP</Text>
           <Text>65074-860</Text>
 
           <Text style={styles.label}>Nome de Usuário</Text>
-          <Text>Jonson</Text>
+          <Text>Igor</Text>
 
           <Text style={styles.label}>Telefone</Text>
           <Text>(98)981004524</Text>
         </View>
-
       </View>
-
+      <Text style = {styles.sectionTitle}>
+        Seus torneios passados
+        </Text>
     </View>
   );
 };

@@ -40,7 +40,7 @@ const ProfileSetupScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.username}>Usuário Jonson</Text>
+        <Text style={styles.username}>Usuário Igor</Text>
         <Text style={styles.subtitle}>
           Seu cadastro está incompleto, para ter acesso a todas as funcionalidades do app, preencha os dados abaixo
         </Text>

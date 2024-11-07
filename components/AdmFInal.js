@@ -2,29 +2,38 @@
 
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { TextInput } from 'react-native-web';
+import UserTournament from './UserTournament';
 
-const ChampionshipAfter = ({ navigation }) => {
+const AdmFinal = ({ navigation }) => {
 
 
   return (
     <View style={styles.container}>
       {/* Cabeçalho com nome do usuário */}
       <View style={styles.header}>
-        <Image source={"./assets/dama.png"} style ={styles.profileImage}/>
+        <Text style={styles.username}>Admnistrador Anselmo Lima</Text>
       </View>
-      <Text style={styles.title}>Torneios Futuros</Text>
       <View style={styles.tournamentsSection}>
-      <TextInput
-        style={styles.searchInput}
-        placeholder="Cidade, nome do torneio, categoria"
-      />
+        <View style={styles.tournamentCard}>
+          <Text style={styles.tournamentTitle}>Torneio Maranhense de Damas</Text>
+          <View style = {styles.flex}>
+          <Text style = {styles.cardText}>Data:{"\n"}12/06/2023</Text>
+          <Text style = {styles.cardText}>Local:{"\n"}Castelinho</Text>
+          <Text style = {styles.cardText}>Inscrições Pendentes:{"\n"}<Text style={{color : "red"}}></Text></Text>
+          </View>
+          <TouchableOpacity style={styles.moreInfoButton}>
+            <Text style={styles.moreInfoButtonText}>Validar inscrições</Text>
+          </TouchableOpacity>
+        </View>
         <View style={styles.tournamentCard}>
           <Text style={styles.tournamentTitle}>Open de damas | Amador</Text>
-          <Text>Data: 02/12/2024</Text>
-          <Text>Local: Costa Rodrigues</Text>
-          <TouchableOpacity style={styles.moreInfoButton}>
-            <Text style={styles.moreInfoButtonText} onPress={() => navigation.navigate('TorneioTwo')}>Mais informações</Text>
+          <View style = {styles.flex}>
+          <Text style = {styles.cardText}>Data:{"\n"}02/12/2024</Text>
+          <Text style = {styles.cardText}>Local:{"\n"}Costa Rodrigues</Text>
+          <Text style = {styles.cardText}>Inscrições Pendentes:{"\n"}<Text style={{color : "red"}}></Text></Text>
+          </View>
+          <TouchableOpacity style={styles.moreInfoButton} >
+            <Text style={styles.moreInfoButtonText}>Validar inscrições</Text>
           </TouchableOpacity>
         </View>
 
@@ -40,8 +49,14 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#333333',
-    paddingVertical: 20,
+    paddingVertical: 40,
     alignItems: 'center',
+
+  },
+  flex : {
+    flexDirection : 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
   },
   profileImageContainer: {
     width: 80,
@@ -51,16 +66,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  cardText: {
+    textAlign: 'center',
+    margin : 10,
+  },
   profileImage: {
-    width: 200,
-    height: 65 ,
-  },searchInput: {
-    backgroundColor: '#FFFFFF',
-    padding: 10,
-    borderRadius: 8,
-    marginBottom: 20,
-    borderColor: '#CCCCCC',
-    borderWidth: 1,
+    width: 80,
+    height: 80,
+    borderRadius: 40,
   },
   username: {
     color: '#D9534F',
@@ -136,4 +149,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ChampionshipAfter;
+export default AdmFinal;

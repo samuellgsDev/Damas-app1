@@ -19,7 +19,7 @@ export default function HomeScreen({ navigation }) {
           text="Registrar conta"
           onPress={() => navigation.navigate('Register')}
         />
-        <SupportText url="https://suporte.example.com" />
+        <SupportText url="https://suporte.example.com"/>
       </View>
     </View>
   );
@@ -28,15 +28,16 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#1E1E1E',
     justifyContent: 'center',
   },
   content: {
-    flex: 2,
+    flex: 3,
     backgroundColor: '#fff',
     borderRadius: 20,
-    marginHorizontal: 20,
     padding: 20,
-    alignItems: 'center',
+    marginBottom: 160,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 });

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { TextInput } from 'react-native-web';
 
 const Championship = ({ navigation }) => {
 
@@ -10,16 +11,15 @@ const Championship = ({ navigation }) => {
     <View style={styles.container}>
       {/* Cabeçalho com nome do usuário */}
       <View style={styles.header}>
-        <View style={styles.profileImageContainer}>
-          <Image
-            source={{ uri: 'https://tse2.mm.bing.net/th?id=OIP.yhqkR9B2hKbtwwZ8bPNbQQHaHw&pid=Api&P=0&h=180' }}//substiruir pela imagem do usuário
-            style={styles.profileImage}
-          />
-        </View>
-        <Text style={styles.username}>Usuário Jonson</Text>
+        <Image source={"./assets/dama.png"} style ={styles.profileImage}/>
       </View>
       <Text style={styles.title}>Torneios Futuros</Text>
-      <View style={styles.tournamentsSection}>
+      <View style={styles.tournamentsSection}
+      >
+        <TextInput
+        style={styles.searchInput}
+        placeholder="Cidade, nome do torneio, categoria"
+      />
         <View style={styles.tournamentCard}>
           <Text style={styles.tournamentTitle}>Torneio Maranhense de Damas</Text>
           <Text>Data: 12/06/2023</Text>
@@ -48,22 +48,26 @@ const styles = StyleSheet.create({
     backgroundColor: '#F4F4F4',
   },
   header: {
-    backgroundColor: '#333333',
+    backgroundColor: '#1E1E1E',
     paddingVertical: 20,
     alignItems: 'center',
+  },searchInput: {
+    backgroundColor: '#FFFFFF',
+    padding: 10,
+    borderRadius: 8,
+    marginBottom: 20,
+    borderColor: '#CCCCCC',
+    borderWidth: 1,
   },
   profileImageContainer: {
-    width: 80,
-    height: 80,
+    height: 100,
     borderRadius: 40,
-    backgroundColor: '#FFF',
     alignItems: 'center',
     justifyContent: 'center',
   },
   profileImage: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
+    width: 200,
+    height: 65 ,
   },
   username: {
     color: '#D9534F',

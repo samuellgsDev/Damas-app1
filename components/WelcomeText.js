@@ -4,16 +4,18 @@ import { Text, StyleSheet } from 'react-native';
 export default function WelcomeText() {
   return (
     <Text style={styles.welcomeText}>
-      Bem vindo ao aplicativo da federação de damas!
+      Bem vindo ao DamApp
     </Text>
   );
 }
 
 const styles = StyleSheet.create({
   welcomeText: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 20,
+    marginBottom: 50,
+    width: '70%',
+    marginTop : -30,
   },
 });
